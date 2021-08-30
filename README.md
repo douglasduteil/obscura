@@ -10,8 +10,8 @@ import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 
 Deno.test('h1 should be filled', async () => {
   const page = await load('<h1>Hi :)</h1>')
-  assertEquals(page.select('h1').text, "Hi :)")
-  page.close()
+  assertEquals(await page.select('h1').text, "Hi :)")
+  await page.close()
 })
 
 ```
@@ -29,9 +29,9 @@ function App(props) {
 
 Deno.test('App should be rendered', async () => {
   const page = await render(<App title="Hi :)" />)
-  assertEquals(page.select('App').props.title, "Hi :)")
-  assertEquals(page.select('App > h1').text, "Hi :)")
-  page.close()
+  assertEquals(await page.select('App').props.title, "Hi :)")
+  assertEquals(await page.select('App > h1').text, "Hi :)")
+  await page.close()
 })
 
 ```
