@@ -7,7 +7,7 @@ import { load } from "https://deno.land/x/obscura/mod.ts"
 import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 
 Deno.test('h1 should be filled', async () => {
-  const page = await load('<h1>{props.title}</h1>')
+  const page = await load('<h1>Hi :)</h1>')
   assertEquals(page.select('h1').text, "Hi :)")
   page.close()
 })
