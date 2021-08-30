@@ -1,3 +1,5 @@
+![obscura](https://images.squarespace-cdn.com/content/v1/5928c88c579fb3d813d092be/1521414354320-BTR4RW84A9842Y8D8RMO/THE-PINHOLE-PAGE-image-web.jpg)
+
 # obscura
 
 The Web Component Testing Framework in Deno.
