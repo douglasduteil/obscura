@@ -27,7 +27,7 @@ function App(props) {
   return <h1>{props.title}</h1>
 }
 
-Deno.test('"Hi :)" should be rendered', async () => {
+Deno.test('App should be rendered', async () => {
   const page = await render(<App title="Hi :)" />)
   assertEquals(page.select('App').props.title, "Hi :)")
   assertEquals(page.select('App > h1').text, "Hi :)")
